@@ -67,7 +67,7 @@
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
         "publicIPAddressType": "Dynamic",
-        "vmName": "dcspmlab-nix",
+        "vmName": "dcspmlab-nixthr",
         "vmSize": "Standard_D2s_v3",
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
@@ -103,7 +103,10 @@
             "apiVersion": "2021-02-01",
             "location": "[parameters('location')]",
             "properties": {
-                "publicIPAllocationMethod": "[variables('publicIPAddressType')]"
+                "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+                "dnsSettings": {
+                    "domainNameLabel": "[tolower(variables('vmName'))]"
+                }
             }
         },
         //create network interface
