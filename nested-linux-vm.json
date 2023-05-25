@@ -92,7 +92,7 @@
         //"keyVaultID": "[resourceId('Microsoft.KeyVault/vaults',variables('keyVaultName'))]",
         //"storageAccountName": "[parameters('storageAccountName')]",
         //"storageAccountID": "[resourceId('Microsoft.Storage/storageAccounts',variables('storageAccountName'))]",
-        "subnetName": "Default"
+        "subnetName": "default"
     },
     //resources
     "resources": [
